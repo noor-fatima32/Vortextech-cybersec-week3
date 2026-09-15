@@ -306,14 +306,3 @@ Important evidence visible in the report includes:
 
 ---
 
-# 8. Final Submission Checklist
-
-- [ ] Public GitHub repository created.
-- [ ] Repository has a clear name such as `vortextech-cybersec-week3`.
-- [ ] `README.md` included.
-- [ ] Structured audit report included.
-- [ ] ZAP HTML evidence included.
-- [ ] Screenshots added if available/required.
-- [ ] Docker/OWASP Juice Shop run instructions included.
-- [ ] Week 3 submission form completed with repository URL.
-
