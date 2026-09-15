@@ -35,12 +35,16 @@ vortextech-cybersec-week3/
 ├── .gitignore
 ├── docker-compose.yml
 ├── report/
-│   └── security-audit.md
+│   ├── security-audit.md
+    └── VortexTech_Week3_Security_Audit_Professional
 ├── evidence/
-│   ├── zap-report.html
+│   ├── zap-report.pdf
 │   └── README.md
 └── screenshots/
-    └── README.md
+    ├── 01-juice-shop-running.png 
+    ├── 02-docker-container.png 
+    ├── 03-zap-scan.png 
+    └── 04-csp-finding.png
 ```
 
 ## Run OWASP Juice Shop
@@ -78,7 +82,7 @@ docker compose down
 4. Use `http://localhost:3000` as the target.
 5. Review the Alerts tab.
 6. Export the HTML report.
-7. Place the exported report in `evidence/zap-report.html`.
+7. Place the exported report in `evidence/zap-report.pdf`.
 
 **Important:** Only use this workflow against the local practice target or another system for which you have explicit authorization.
 
@@ -96,7 +100,7 @@ The detailed audit is in [`report/security-audit.md`](report/security-audit.md).
 
 ## Evidence
 
-The original ZAP HTML output is stored in `evidence/zap-report.html`.
+The original ZAP PDF output is stored in `evidence/zap-report.pdf`.
 
 The uploaded ZAP report was generated on **14 September 2026 at 08:23:51** using **ZAP 2.17.0** and targeted `http://localhost:3000`.
 

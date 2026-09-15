@@ -4,5 +4,5 @@ This directory contains the original OWASP ZAP HTML scan output used for the Wee
 
 ## File
 
-- `zap-report.html` — ZAP by Checkmarx scan report for `http://localhost:3000`.
+- `zap-report.pdf` — ZAP by Checkmarx scan report for `http://localhost:3000`.
 
