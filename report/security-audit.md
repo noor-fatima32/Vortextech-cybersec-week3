@@ -292,7 +292,7 @@ The task brief also suggests manual exploration of search/forms, authentication 
 The original ZAP HTML report is stored at:
 
 ```text
-evidence/zap-report.html
+evidence/zap-report.pdf
 ```
 
 Important evidence visible in the report includes:
