@@ -15,17 +15,16 @@ This repository contains my Week 3 security audit of the intentionally vulnerabl
 
 ## What was completed
 
-The audit used OWASP ZAP against the local Juice Shop instance and produced five alert types:
+The audit used OWASP ZAP against the local Juice Shop instance and produced four alert types:
 
 | Finding / Alert | Risk | Category used in audit |
 |---|---|---|
-| CSP: Failure to Define Directive with No Fallback | Medium | Security Misconfiguration |
 | Content Security Policy (CSP) Header Not Set | Medium | Security Misconfiguration |
 | Cross-Domain Misconfiguration | Medium | CORS / Access-Control Misconfiguration |
 | Timestamp Disclosure - Unix | Low | Information Disclosure |
 | Modern Web Application | Informational | Informational — not counted as a vulnerability |
 
-The two CSP alerts are related to the same security-control area and are documented as separate findings under **Security Misconfiguration**. Together with the **CORS / Access-Control Misconfiguration** and **Information Disclosure** findings, the audit covers three different vulnerability categories as required.
+Together, the CSP, CORS, and Information Disclosure findings cover three distinct OWASP Top 10 vulnerability categories, as required by the task.
 
 ## Repository structure
 
@@ -36,15 +35,16 @@ vortextech-cybersec-week3/
 ├── docker-compose.yml
 ├── report/
 │   ├── security-audit.md
-    └── VortexTech_Week3_Security_Audit_Professional
+│   └── VortexTech_Week3_Security_Audit_Professional.pdf
 ├── evidence/
+│   ├── zap-report.html
 │   ├── zap-report.pdf
 │   └── README.md
 └── screenshots/
-    ├── 01-juice-shop-running.png 
-    ├── 02-docker-container.png 
-    ├── 03-zap-scan.png 
-    └── 04-csp-finding.png
+    ├── 01-juice-shop-running.png
+    ├── 02-docker-container.png
+    ├── 03-zap-scan.png
+    └── 04-timestamp-finding.png
 ```
 
 ## Run OWASP Juice Shop
@@ -78,11 +78,11 @@ docker compose down
 
 1. Start Juice Shop on `http://localhost:3000`.
 2. Open OWASP ZAP.
-3. Start a scan against the local target.
+3. Start an Automated Scan against the local target.
 4. Use `http://localhost:3000` as the target.
 5. Review the Alerts tab.
-6. Export the HTML report.
-7. Place the exported report in `evidence/zap-report.pdf`.
+6. Export the report (Report → Generate Report) as HTML and/or PDF.
+7. Place the exported report(s) in `evidence/`.
 
 **Important:** Only use this workflow against the local practice target or another system for which you have explicit authorization.
 
@@ -100,9 +100,9 @@ The detailed audit is in [`report/security-audit.md`](report/security-audit.md).
 
 ## Evidence
 
-The original ZAP PDF output is stored in `evidence/zap-report.pdf`.
+The original ZAP scan output is stored in `evidence/zap-report.html` (native export) and `evidence/zap-report.pdf`.
 
-The uploaded ZAP report was generated on **14 September 2026 at 08:23:51** using **ZAP 2.17.0** and targeted `http://localhost:3000`.
+The ZAP report was generated on **21 September 2026 at 19:07:33** using **ZAP 2.17.0** and targeted `http://localhost:3000`.
 
 ## Disclaimer
 
